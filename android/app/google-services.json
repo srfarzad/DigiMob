@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "823432379151",
+    "firebase_url": "https://digimob-fe397.firebaseio.com",
+    "project_id": "digimob-fe397",
+    "storage_bucket": "digimob-fe397.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823432379151:android:6ba39b43395e531d",
+        "android_client_info": {
+          "package_name": "com.digimob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823432379151-iqlh72mfo4p5s13i51ljum7ph00o18sk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBi2_qtQYWHAG0oPDM-qMUD1zQMg_epuWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823432379151-iqlh72mfo4p5s13i51ljum7ph00o18sk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
