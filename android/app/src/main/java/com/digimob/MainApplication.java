@@ -3,6 +3,8 @@ package com.digimob;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import dog.craftz.sqlite_2.RNSqlite2Package;
+import com.reactlibrary.RNPushePackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import io.invertase.firebase.RNFirebasePackage;
 //import com.sbugert.rnadmob.RNAdMobPackage;
@@ -27,6 +29,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNSqlite2Package(),
+            new RNPushePackage(),
             new VectorIconsPackage(),
             new RNFirebasePackage(),
           //  new RNAdMobPackage(),

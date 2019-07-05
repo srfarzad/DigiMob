@@ -24,14 +24,34 @@ import Setting from "./screens/Setting";
 import Search from "./screens/Search";
 import MyWebView from "./screens/MyWebView";
 import ProductScreen from "./screens/ProductScreen";
+import Pushe from 'react-native-pushe'
+import SQLite from 'react-native-sqlite-2';
 
-
+const db = SQLite.openDatabase('test.db', '1.0', '', 1);
 
 type Props = {};
 
 
 
 class SignIn extends Component<Props> {
+
+    constructor(props) {
+        super(props);
+        Pushe.initialize(true);
+
+
+        db.transaction(function (txn) {
+
+            txn.executeSql('DROP TABLE IF EXISTS Users', []);
+
+            txn.executeSql('CREATE TABLE IF NOT EXISTS Users(user_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, name VARCHAR(30))', []);
+            txn.executeSql('INSERT INTO Users (name) VALUES (:name)', ['nora']);
+
+
+        })
+
+
+    }
 
 
         onPresshandler(screenName , params){
