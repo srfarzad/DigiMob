@@ -3,14 +3,15 @@ package com.digimob;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-//import com.sbugert.rnadmob.RNAdMobPackage;
+import com.oblador.vectoricons.VectorIconsPackage;
 import io.invertase.firebase.RNFirebasePackage;
+//import com.sbugert.rnadmob.RNAdMobPackage;
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-
+import io.invertase.firebase.admob.RNFirebaseAdMobPackage; // <-- Add this line
 import java.util.Arrays;
 import java.util.List;
 
@@ -26,9 +27,11 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-           // new RNAdMobPackage(),
+            new VectorIconsPackage(),
             new RNFirebasePackage(),
-            new RNGestureHandlerPackage()
+          //  new RNAdMobPackage(),
+            new RNGestureHandlerPackage(),
+              new RNFirebaseAdMobPackage()
       );
     }
 

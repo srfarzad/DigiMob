@@ -23,11 +23,13 @@ import SignUp from "./screens/SignUp";
 import Setting from "./screens/Setting";
 import Search from "./screens/Search";
 import MyWebView from "./screens/MyWebView";
-//import { AdMobBanner } from 'react-native-admob';
+import ProductScreen from "./screens/ProductScreen";
 
 
 
 type Props = {};
+
+
 
 class SignIn extends Component<Props> {
 
@@ -94,12 +96,7 @@ class SignIn extends Component<Props> {
                     </View>
                 </TouchableOpacity>
 
-{/*
-                <AdMobBanner
-                    adSize="fullBanner"
-                    adUnitID="ca-app-pub-3940256099942544/6300978111"
-                    didFailToReceiveAdWithError={this.bannerError}
-                    onAdFailedToLoad={error => console.error(error)} />*/}
+
 
             </View>
 
@@ -209,6 +206,11 @@ const MainNavigator = createStackNavigator({
     MyWebView: {
         screen: MyWebView
     },
+    ProductScreen: {
+        screen: ProductScreen
+    },
+
+    //ProductScreen
 
 
 
