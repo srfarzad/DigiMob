@@ -24,8 +24,10 @@ import Setting from "./screens/Setting";
 import Search from "./screens/Search";
 import MyWebView from "./screens/MyWebView";
 import ProductScreen from "./screens/ProductScreen";
+import AnimationLottie from "./screens/AnimationLottie";
 import Pushe from 'react-native-pushe'
 import SQLite from 'react-native-sqlite-2';
+import GoogleMapScreen from "./screens/tabs/GoogleMapScreen";
 
 const db = SQLite.openDatabase('test.db', '1.0', '', 1);
 
@@ -102,14 +104,24 @@ class SignIn extends Component<Props> {
                     <Text>Register</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={[styles.buttonContainer, styles.fabookButton]}>
+                <TouchableOpacity style={[styles.buttonContainer, styles.fabookButton]}    onPress={()=>{
+
+                    // this.props.navigation.navigate('Dashboard')
+                    this.onPresshandler('AnimationLottie','')
+
+                }} >
                     <View style={styles.socialButtonContent}>
                         <Image style={styles.icon} source={{uri: 'https://png.icons8.com/facebook/androidL/40/FFFFFF'}}/>
                         <Text style={styles.loginText}>Continue with facebook</Text>
                     </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={[styles.buttonContainer, styles.googleButton]}>
+                <TouchableOpacity style={[styles.buttonContainer, styles.googleButton]}  onPress={()=>{
+
+                    // this.props.navigation.navigate('Dashboard')
+                    this.onPresshandler('GoogleMapScreen','')
+
+                }} >
                     <View style={styles.socialButtonContent}>
                         <Image style={styles.icon} source={{uri: 'https://png.icons8.com/google/androidL/40/FFFFFF'}}/>
                         <Text style={styles.loginText}>Sign in with google</Text>
@@ -228,6 +240,12 @@ const MainNavigator = createStackNavigator({
     },
     ProductScreen: {
         screen: ProductScreen
+    },
+    AnimationLottie: {
+        screen: AnimationLottie
+    },
+    GoogleMapScreen: {
+        screen: GoogleMapScreen
     },
 
     //ProductScreen

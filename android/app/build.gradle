@@ -109,6 +109,18 @@ android {
         versionName "1.0"
         multiDexEnabled true
     }
+
+     signingConfigs {
+            release {
+
+                    storeFile file('/Users/farzad/Desktop/DigiMob')
+                    storePassword '123456789'
+                    keyAlias 'DigiMob'
+                    keyPassword '123456789'
+
+            }
+        }
+
     splits {
         abi {
             reset()
@@ -121,6 +133,7 @@ android {
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+             signingConfig signingConfigs.release
         }
     }
     // applicationVariants are e.g. debug, release
@@ -139,6 +152,9 @@ android {
 }
 
 dependencies {
+    //implementation project(':react-native-maps')
+    implementation project(':lottie-react-native')
+    implementation project(':react-native-video')
     implementation project(':react-native-sqlite-2')
     implementation project(':react-native-pushe')
     implementation project(':react-native-vector-icons')
@@ -152,6 +168,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:16.0.8'
     implementation 'com.google.firebase:firebase-ads:17.2.1'
     implementation 'com.android.support:multidex:1.0.3'
+
+
+    implementation(project(':react-native-maps'))
+   implementation 'com.google.android.gms:play-services-maps:10.0.0'
+
+
 
 }
 

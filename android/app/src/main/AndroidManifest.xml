@@ -34,6 +34,9 @@
 
         <meta-data android:name="co.ronash.pushe.token" android:value="PUSHE_308921679544"/>
 
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCScKQO_MVP86SArEgExMOPQ1BCSlItGtk"/>
 
     </application>
 

@@ -72,7 +72,7 @@ const arr = this.state.newApps.map(function(item){
                         }} >
 
                         <Image source={{uri : "http://androidsupport.ir/market/images/"+item.icon}} style={{width: 96 , height : 96}} />
-                        <Text> {item.title} </Text>
+                        <Text style={{fontFamily:"Iranian Sans"}}> {item.title} </Text>
 
                         </TouchableOpacity>
                         </Body>
